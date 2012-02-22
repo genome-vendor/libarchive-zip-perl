@@ -1,0 +1,7 @@
+fix_example_shebangs.patch
+fix_META.yml_min_required_perl_version.patch
+fix-spelling-error.patch
+0001-Make-the-embedded-File-Which-which-work-in-BEGIN-blo.patch
+0002-TODO-test-for-rt.cpan.org-73797-deflated-empty-file-.patch
+0003-Fix-for-rt.cpan.org-73797-deflated-empty-file-direct.patch
+fix_clean_target.patch

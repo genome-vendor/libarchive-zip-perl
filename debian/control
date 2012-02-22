@@ -1,0 +1,38 @@
+Source: libarchive-zip-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: libperl-minimumversion-perl,
+ libpod-simple-perl,
+ libtest-cpan-meta-perl,
+ libtest-minimumversion-perl,
+ libtest-pod-perl,
+ perl (>= 5.10.1) | libcompress-raw-zlib-perl (>= 2.017),
+ unzip,
+ zip
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ernesto Hernández-Novich (USB) <emhn@usb.ve>,
+ Matthias Klose <doko@debian.org>,
+ Salvatore Bonaccorso <carnil@debian.org>
+Standards-Version: 3.9.2
+Homepage: http://search.cpan.org/dist/Archive-Zip/
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libarchive-zip-perl.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libarchive-zip-perl.git
+
+Package: libarchive-zip-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ perl (>= 5.10.1) | libcompress-raw-zlib-perl (>= 2.017)
+Description: Perl module for manipulation of ZIP archives
+ The Archive::Zip module allows a Perl program to create, manipulate,
+ read, and write Zip archive files.
+ .
+ Zip archives can be created, or you can read from existing zip files.
+ Once created, they can be written to files, streams, or strings.
+ .
+ Members can be added, removed, extracted, replaced, rearranged, and
+ enumerated.  They can also be renamed or have their dates, comments,
+ or other attributes queried or modified.  Their data can be
+ compressed or uncompressed as needed.  Members can be created from
+ members in existing Zip files, or from existing directories, files,
+ or strings.

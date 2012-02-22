@@ -1,0 +1,19 @@
+Description: fix clean target
+ Mangling all filenames into one long string is not what we want.
+Origin: vendor
+Bug: https://rt.cpan.org/Ticket/Display.html?id=75197
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=75197
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2012-02-21
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -28,7 +28,7 @@
+ 		'Time::Local'         => 0,
+ 	},
+ 	clean => {
+-		FILES => join( '', qw{
++		FILES => join( ' ', qw{
+ 			test.log
+ 			testdir/*
+ 			testdir/
